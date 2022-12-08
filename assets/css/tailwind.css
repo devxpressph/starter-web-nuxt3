@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #FFFFFF !important;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+#__nuxt {
+  height: 100%;
+  background-color: rgb(28, 28, 28);
+}
+
+.formkit-messages {
+  display: none;
+}
+
+.formkit-messages.list-none {
+  display: block;
+  padding-left: 20px;
+}
+
+.formkit-icon {
+  display: flex;
+  width: 17px;
+  color: #cccccc;
+  z-index: 1;
+  height: 100%;
+}
