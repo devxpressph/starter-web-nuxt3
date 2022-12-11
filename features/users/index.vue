@@ -1,5 +1,7 @@
 
 <script setup lang="ts">
+import EllipsisVertical from '~~/components/icons/ellipsisVertical.vue';
+
 
   interface FormProps {
     search: string
@@ -115,8 +117,14 @@
         <td>{{ user.username }}</td>
         <td>{{ user.fullname }}</td>
         <td>{{ user.lastLogin }}</td>
-        <td>
-          <button @click="isDrawerOpen = true">Test</button>
+        <td class="text-right w-10">
+          <div class="dropdown dropdown-left">
+            <label tabindex="0" class="btn btn-xs btn-ghost"><EllipsisVertical /></label>
+            <div tabindex="0" class="dropdown-content menu p-2 shadow-xl bg-base-100 rounded-box">
+              <button class="btn btn-outline mb-3">Change Role</button>
+              <button class="btn btn-outline">Enable</button>
+            </div>
+          </div>
         </td>
       </tr>
     </TableBody>

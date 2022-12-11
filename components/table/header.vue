@@ -5,9 +5,14 @@
 </script>
 
 <template>
-  <thead>
+  <thead class="sticky top-0 z-30">
     <tr>
-      <td v-for="item in data">{{ item }}</td>
+      <td
+        v-for="item in data"
+        :class="item === 'Action' ? 'text-right' : 'text-left'"
+      >
+        {{ item }}
+      </td>
     </tr>
   </thead>
 </template>
