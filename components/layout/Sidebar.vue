@@ -18,7 +18,7 @@
       url: "/dashboard/inventory"
     },
     {
-      label: "User Management",
+      label: "Users",
       url: "/dashboard/users"
     }
   ]

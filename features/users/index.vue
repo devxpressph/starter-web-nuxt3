@@ -1,6 +1,6 @@
 
 <script setup lang="ts">
-import EllipsisVertical from '~~/components/icons/ellipsisVertical.vue';
+  import EllipsisVertical from '~~/components/icons/ellipsisVertical.vue';
 
 
   interface FormProps {
@@ -79,7 +79,7 @@ import EllipsisVertical from '~~/components/icons/ellipsisVertical.vue';
 </script>
 
 <template>
-  <div class="py-5 flex justify-between items-center">
+  <div class="pt-3 flex justify-between items-center">
     <div>
       <h3 class="text-xl font-bold">Users</h3>
     </div>
@@ -113,10 +113,10 @@ import EllipsisVertical from '~~/components/icons/ellipsisVertical.vue';
     <TableHeader :data="['ID', 'Username', 'Full Name', 'Last Login', 'Action']" />
     <TableBody>
       <tr v-for="user in users">
-        <td>{{ user.id }}</td>
-        <td>{{ user.username }}</td>
-        <td>{{ user.fullname }}</td>
-        <td>{{ user.lastLogin }}</td>
+        <td class="text-sm">{{ user.id }}</td>
+        <td class="text-sm">{{ user.username }}</td>
+        <td class="text-sm">{{ user.fullname }}</td>
+        <td class="text-sm">{{ user.lastLogin }}</td>
         <td class="text-right w-10">
           <div class="dropdown dropdown-left">
             <label tabindex="0" class="btn btn-xs btn-ghost"><EllipsisVertical /></label>

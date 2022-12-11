@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+  import DashBoard from "~/features/dashboard"
+</script>
 
 <template>
   <div class="container mx-auto">
-    <h1>Dashboard</h1>
+    <DashBoard />
   </div>
 </template>

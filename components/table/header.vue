@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <thead class="sticky top-0 z-30">
+  <thead class="sticky top-0 z-10">
     <tr>
       <td
         v-for="item in data"
