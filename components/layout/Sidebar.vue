@@ -1,3 +1,29 @@
+<script setup lang="ts">import { RouteLocationRaw } from 'vue-router';
+
+  const route = useRoute()
+  console.log(route.path)
+
+  interface iNavLink {
+    label: String
+    url: RouteLocationRaw
+  }
+
+  const navLinks: iNavLink[] = [
+    {
+      label: "Dashboard",
+      url: "/dashboard"
+    },
+    {
+      label: "Inventory",
+      url: "/dashboard/inventory"
+    },
+    {
+      label: "User Management",
+      url: "/dashboard/users"
+    }
+  ]
+</script>
+
 <template>
   <div class="grid gap-4">
     <div class="w-[100px] overflow-hidden rounded-lg">
@@ -5,11 +31,13 @@
     </div>
     <div class="">
       <ul class="menu w-full text-base-content">
-        <li class="rounded-lg hover:bg-gray-100">
-          <NuxtLink to="/dashboard" class="text-gray-300 hover:text-primary">Dashboard</NuxtLink>
-        </li>
-        <li class="rounded-lg hover:bg-gray-100">
-          <NuxtLink to="/dashboard/inventory" class="text-gray-300 hover:text-primary">Inventory</NuxtLink>
+        <li v-for="link in navLinks">
+          <NuxtLink
+            class="hover:text-primary" 
+            :to="link.url" 
+            :class="route.path === link.url ? 'text-white font-bold' : 'text-gray-300'"
+          >{{ link.label }}
+        </NuxtLink>
         </li>
       </ul>
     </div>

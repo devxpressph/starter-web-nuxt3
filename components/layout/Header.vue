@@ -28,7 +28,7 @@
         <ul
           ref="menuElement"
           v-show="isMenuShown"
-          class="menu menu-compact mt-3 p-2 shadow bg-base-100 rounded-box w-52 absolute right-0"
+          class="menu menu-compact mt-3 p-2 shadow bg-base-100 rounded-box w-52 absolute right-0 z-50"
         >
           <li @click="toggleMenu(!isMenuShown)">
             <NuxtLink to="/dashboard/profile" class="justify-between">
